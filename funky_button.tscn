@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6qmbt1rua6gx"]
+
+[ext_resource type="Script" uid="uid://cfv5jubpk6tav" path="res://funky_button.gd" id="1_bocfr"]
+
+[node name="Funky button" type="TextureButton"]
+custom_minimum_size = Vector2(250, 50)
+offset_right = 250.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_bocfr")
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 200, 0, 250, 50, 50, 50)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

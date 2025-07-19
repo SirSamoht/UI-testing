@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://l0wdrm5fkdih"]
+
+[ext_resource type="Script" uid="uid://b3x8rhjcwsj6k" path="res://slidy_button.gd" id="1_hlkhv"]
+
+[node name="SlidyButton" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.347
+anchor_bottom = 0.077
+offset_right = -399.744
+offset_bottom = -49.896
+script = ExtResource("1_hlkhv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
